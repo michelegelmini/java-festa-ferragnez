@@ -16,20 +16,27 @@ public class CheckGuest {
 		userGuest = scanner.nextLine();
 		
 		
-		//metodo con for
+		
 		
 		boolean isOnTheList = false;
 		
-		for (int i = 0; i < guestList.length; i++ ) {
-			
-			//System.out.println(guestList[i]);
-			
+		
+		//metodo con for
+		/*
+		 * for (int i = 0; i < guestList.length; i++ ) { if
+		 * (guestList[i].equals(userGuest)) { isOnTheList = true; break; } }
+		 */
+		
+		
+		//metodo con while
+		
+		int i = 0;
+		while (!isOnTheList && i < guestList.length) {
 			if (guestList[i].equals(userGuest)) {
 				isOnTheList = true;
-				break;
-			}
-		}
-		
+				}
+			i++;
+				}
 		
 		if (isOnTheList) {
 			System.out.println("Il tuo nome è presente, benvenuto " + userGuest + "!");
@@ -39,7 +46,7 @@ public class CheckGuest {
 		
 		scanner.close();
 		
-		//metodo con while
+		
 		
 		
 		
