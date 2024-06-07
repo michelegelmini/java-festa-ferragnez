@@ -21,26 +21,40 @@ public class CheckGuest {
 		//metodo con for
 		
 //		
-//		  for (int i = 0; i < guestList.length; i++ ) { if
-//		  (guestList[i].equals(userGuest)) { isOnTheList = true; break; } 
+//	  	for (int i = 0; i < guestList.length; i++ ) { 
+//			if (guestList[i].equals(userGuest)) {
+//				isOnTheList = true; 
+//				break; 
+//			} 
 //		}
+		
+		//metodo for-each
+		
+		for (String i : guestList) {
+			if (i.equals(userGuest)) { 
+				isOnTheList = true; 
+				break;
+				} 
+		}
 		 
 		
 		//metodo con while
 		
-		int i = 0;
-		while (!isOnTheList && i < guestList.length) {
-			if (guestList[i].equals(userGuest)) {
-				isOnTheList = true;
-				}
-			i++;
-				}
+//		int i = 0;
+//		while (!isOnTheList && i < guestList.length) {
+//			if (guestList[i].equals(userGuest)) {
+//				isOnTheList = true;
+//				}
+//			i++;
+//				}
 		
 		if (isOnTheList) {
 			System.out.println("Il tuo nome è presente, benvenuto " + userGuest + "!");
 		} else {
 			System.out.println("Il tuo nome non è presente, vattene " + userGuest + "!");
 		}
+		
+		
 
 	}
 	}
