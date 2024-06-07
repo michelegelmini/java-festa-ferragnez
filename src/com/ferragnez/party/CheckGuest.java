@@ -30,8 +30,8 @@ public class CheckGuest {
 		
 		//metodo for-each
 		
-		for (String i : guestList) {
-			if (i.equals(userGuest)) { 
+		for (String guest : guestList) {
+			if (guest.equals(userGuest)) { 
 				isOnTheList = true; 
 				break;
 				} 
